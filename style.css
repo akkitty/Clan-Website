@@ -1,0 +1,98 @@
+/* General Styles */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+/* === LANDING PAGE === */
+h1 {
+    color: #333;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:nth-child(1) { background-color: blue; color: white; }
+button:nth-child(2) { background-color: red; color: white; }
+button:nth-child(3) { background-color: black; color: white; }
+button:nth-child(4) { background-color: green; color: white; }
+
+/* === CLAN PAGES === */
+.blue-bg { background-color: blue; }
+.red-bg { background-color: red; }
+.black-bg { background-color: black; }
+.green-bg { background-color: green; }
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo {
+    width: 200px; /* Adjust size as needed */
+}
+
+/* Password Input */
+input {
+    padding: 10px;
+    font-size: 18px;
+    border: 2px solid gray;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px;
+    font-size: 18px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+/* === SECURITY LOG PUZZLE === */
+.security-log-bg { background-color: #222; color: white; }
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.slot {
+    width: 100px;
+    height: 100px;
+    border: 2px dashed gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+img {
+    width: 80px;
+    cursor: grab;
+}
+
+/* === SUCCESS PAGE === */
+.success-bg { background-color: #4CAF50; color: white; }
+
+h1 {
+    font-size: 40px;
+}
