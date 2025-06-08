@@ -39,6 +39,22 @@ button:nth-child(4) { background-color: green; color: white; }
 .black-bg { background-color: black; }
 .green-bg { background-color: green; }
 
+@keyframes metallic-shimmer {
+    0% { background: linear-gradient(120deg, #1a1aff, #3333ff, #4d4dff); }
+    25% { background: linear-gradient(120deg, #3333ff, #4d4dff, #6666ff); }
+    50% { background: linear-gradient(120deg, #4d4dff, #6666ff, #8080ff); }
+    75% { background: linear-gradient(120deg, #6666ff, #8080ff, #1a1aff); }
+    100% { background: linear-gradient(120deg, #1a1aff, #3333ff, #4d4dff); }
+}
+
+.metallic-shimmer-bg {
+    animation: metallic-shimmer 5s infinite linear;
+    background-size: 400% 400%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
 .container {
     display: flex;
     flex-direction: column; /* Ensures vertical stacking */
