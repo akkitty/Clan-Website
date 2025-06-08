@@ -40,19 +40,49 @@ button:nth-child(4) { background-color: green; color: white; }
 .green-bg { background-color: green; }
 
 @keyframes metallic-shimmer {
-    0% { background: linear-gradient(120deg, #1a1aff, #3333ff, #4d4dff); }
-    25% { background: linear-gradient(120deg, #3333ff, #4d4dff, #6666ff); }
-    50% { background: linear-gradient(120deg, #4d4dff, #6666ff, #8080ff); }
-    75% { background: linear-gradient(120deg, #6666ff, #8080ff, #1a1aff); }
-    100% { background: linear-gradient(120deg, #1a1aff, #3333ff, #4d4dff); }
+    0% { background: linear-gradient(120deg, var(--dark-shade), var(--mid-shade), var(--light-shade)); }
+    25% { background: linear-gradient(120deg, var(--mid-shade), var(--light-shade), var(--highlight)); }
+    50% { background: linear-gradient(120deg, var(--light-shade), var(--highlight), var(--dark-shade)); }
+    75% { background: linear-gradient(120deg, var(--highlight), var(--dark-shade), var(--mid-shade)); }
+    100% { background: linear-gradient(120deg, var(--dark-shade), var(--mid-shade), var(--light-shade)); }
 }
 
 .metallic-shimmer-bg {
-    animation: metallic-shimmer 5s infinite linear;
+    animation: metallic-shimmer 4s infinite linear;
     background-size: 400% 400%;
     background-repeat: no-repeat;
     background-position: center;
 }
+
+/* Define color themes for each clan */
+.blue-bg {
+    --dark-shade: #0D1A66;
+    --mid-shade: #2F4FC3;
+    --light-shade: #6A86FF;
+    --highlight: #A5B4FF;
+}
+
+.red-bg {
+    --dark-shade: #660D0D;
+    --mid-shade: #C32F2F;
+    --light-shade: #FF6A6A;
+    --highlight: #FFB4B4;
+}
+
+.black-bg {
+    --dark-shade: #1A1A1A;
+    --mid-shade: #4D4D4D;
+    --light-shade: #808080;
+    --highlight: #B0B0B0;
+}
+
+.green-bg {
+    --dark-shade: #0D660D;
+    --mid-shade: #2FC32F;
+    --light-shade: #6AFF6A;
+    --highlight: #B4FFB4;
+}
+
 
 
 .container {
