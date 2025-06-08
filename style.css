@@ -113,6 +113,11 @@ button:hover {
     margin-top: 20px;
 }
 
+/* draggable images should have cursor */
+img[draggable="true"] {
+    cursor: grab;
+}
+
 .slot {
     width: 100px;
     height: 100px;
