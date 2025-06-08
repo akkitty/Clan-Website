@@ -1,5 +1,6 @@
 const draggables = document.querySelectorAll("img[draggable='true']");
 const slots = document.querySelectorAll(".slot");
+const successMessage = document.getElementById("success-message");
 
 draggables.forEach(img => {
     img.addEventListener("dragstart", event => {
@@ -13,18 +14,31 @@ slots.forEach(slot => {
     });
 
     slot.addEventListener("drop", event => {
+        event.preventDefault();
+
         const draggedId = event.dataTransfer.getData("text");
-        const correctMatch = slot.getAttribute("data-match");
+        const draggedElement = document.getElementById(draggedId);
 
-        if (draggedId === correctMatch) {
-            const draggedElement = document.getElementById(draggedId);
-            slot.appendChild(draggedElement);
-            draggedElement.removeAttribute("draggable"); // Prevent further dragging
+        // Append dragged image to the slot
+        // First remove any existing child from the slot (so only one image per slot)
+        if (slot.firstElementChild) {
+            // Move existing image back to original container or wherever you want
+            // For simplicity, move it back to container holding draggables
+            document.querySelector('.grid-area').appendChild(slot.firstElementChild);
         }
+        slot.appendChild(draggedElement);
 
-        // Check if all slots are filled correctly
-        if ([...slots].every(slot => slot.children.length > 0)) {
-            window.location.href = "success.html"; // Redirect to Success page
+        // Check correctness:
+        // Each slot has data-match attribute = id of correct draggable image
+        // Verify that for all slots: slot.firstElementChild.id === slot.dataset.match
+        const allCorrect = [...slots].every(s => {
+            return s.firstElementChild && s.firstElementChild.id === s.dataset.match;
+        });
+
+        if (allCorrect) {
+            successMessage.style.display = "block";
+        } else {
+            successMessage.style.display = "none";
         }
     });
 });
