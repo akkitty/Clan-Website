@@ -41,11 +41,13 @@ button:nth-child(4) { background-color: green; color: white; }
 
 .container {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 30px; /* Adds spacing between elements */
+    flex-direction: column; /* Ensures vertical stacking */
+    align-items: center; /* Centers everything */
+    justify-content: center; /* Keeps elements balanced */
+    gap: 20px; /* Adds spacing between elements */
+    width: 100%; /* Prevents unwanted side alignment */
 }
+
 
 .logo {
     width: 200px; /* Adjust size as needed */
