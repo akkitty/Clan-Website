@@ -8,22 +8,23 @@
     <script defer src="drag-drop.js"></script>
 </head>
 <body class="security-log-bg">
-    <h1>Security Log</h1>
-    <p>Drag the images to their correct spots.</p>
-    
-    <div class="container">
-        <!-- Fixed Images -->
-        <div class="slot" data-match="img1"><img src="fixed1.png"></div>
-        <div class="slot" data-match="img2"><img src="fixed2.png"></div>
-        <div class="slot" data-match="img3"><img src="fixed3.png"></div>
-        <div class="slot" data-match="img4"><img src="fixed4.png"></div>
+    <div class="security-container">
+        <h1>Security Log</h1>
+        <p>Drag the images to their correct spots.</p>
 
-        <!-- Draggable Images -->
-        <img src="draggable1.png" id="img1" draggable="true">
-        <img src="draggable2.png" id="img2" draggable="true">
-        <img src="draggable3.png" id="img3" draggable="true">
-        <img src="draggable4.png" id="img4" draggable="true">
+        <div class="grid-area">
+            <!-- Fixed Images -->
+            <div class="slot" data-match="img1"><img src="fixed1.png"></div>
+            <div class="slot" data-match="img2"><img src="fixed2.png"></div>
+            <div class="slot" data-match="img3"><img src="fixed3.png"></div>
+            <div class="slot" data-match="img4"><img src="fixed4.png"></div>
+
+            <!-- Draggable Images -->
+            <img src="draggable1.png" id="img1" draggable="true">
+            <img src="draggable2.png" id="img2" draggable="true">
+            <img src="draggable3.png" id="img3" draggable="true">
+            <img src="draggable4.png" id="img4" draggable="true">
+        </div>
     </div>
 </body>
 </html>
-
