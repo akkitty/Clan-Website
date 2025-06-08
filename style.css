@@ -1,4 +1,4 @@
-/* General Styles */
+/* === GENERAL === */
 body {
     display: flex;
     justify-content: center;
@@ -10,11 +10,6 @@ body {
 }
 
 /* === LANDING PAGE === */
-h1 {
-    color: #333;
-    font-size: 40px;
-}
-
 .button-container {
     display: flex;
     flex-direction: column;
@@ -22,18 +17,11 @@ h1 {
 }
 
 button {
-    padding: 12px 24px;
+    padding: 10px 20px;
     font-size: 18px;
-    background-color: #007BFF;
-    color: white;
     border: none;
     cursor: pointer;
-    border-radius: 6px;
-    transition: background-color 0.3s ease;
-}
-
-button:hover {
-    background-color: #0056b3;
+    border-radius: 5px;
 }
 
 button:nth-child(1) { background-color: blue; color: white; }
@@ -41,30 +29,11 @@ button:nth-child(2) { background-color: red; color: white; }
 button:nth-child(3) { background-color: black; color: white; }
 button:nth-child(4) { background-color: green; color: white; }
 
-/* === CLAN PAGES === */
-.blue-bg {
-    background-color: blue;
-    --shade1: #1e3a8a;
-    --shade2: #60a5fa;
-}
-
-.red-bg {
-    background-color: red;
-    --shade1: #7f1d1d;
-    --shade2: #f87171;
-}
-
-.black-bg {
-    background-color: black;
-    --shade1: #1a1a1a;
-    --shade2: #4d4d4d;
-}
-
-.green-bg {
-    background-color: green;
-    --shade1: #064e3b;
-    --shade2: #6ee7b7;
-}
+/* === CLAN BACKGROUNDS === */
+.blue-bg { --shade1: #1e3a8a; --shade2: #60a5fa; }
+.red-bg { --shade1: #7f1d1d; --shade2: #f87171; }
+.black-bg { --shade1: #1a1a1a; --shade2: #4d4d4d; }
+.green-bg { --shade1: #064e3b; --shade2: #6ee7b7; }
 
 .metallic-shimmer-bg {
     background: repeating-linear-gradient(
@@ -77,20 +46,12 @@ button:nth-child(4) { background-color: green; color: white; }
     animation: shimmer 6s infinite linear;
 }
 
-/* Shimmer animation */
 @keyframes shimmer {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
-/* === CONTAINER (General Layout) === */
 .container {
     display: flex;
     flex-direction: column;
@@ -102,8 +63,9 @@ button:nth-child(4) { background-color: green; color: white; }
 }
 
 .logo {
-    width: 200px;
+    width: 300px;
     max-width: 80%;
+    height: auto;
 }
 
 input {
@@ -114,6 +76,20 @@ input {
     margin-top: 20px;
 }
 
+button {
+    padding: 12px 24px;
+    font-size: 18px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
 /* === SECURITY LOG PUZZLE === */
 .security-log-bg {
     background-color: #222;
@@ -121,11 +97,20 @@ input {
 }
 
 .security-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 40px;
+}
+
+.grid-area {
     display: grid;
     grid-template-columns: repeat(4, 100px);
     gap: 20px;
     justify-content: center;
     align-items: center;
+    margin-top: 20px;
 }
 
 .slot {
@@ -146,4 +131,18 @@ img {
 .success-bg {
     background-color: #4CAF50;
     color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+
+.success-bg h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.success-bg p {
+    font-size: 20px;
 }
