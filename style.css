@@ -39,48 +39,50 @@ button:nth-child(4) { background-color: green; color: white; }
 .black-bg { background-color: black; }
 .green-bg { background-color: green; }
 
-@keyframes metallic-shimmer {
-    0% { background: linear-gradient(120deg, var(--dark-shade), var(--mid-shade), var(--light-shade)); }
-    25% { background: linear-gradient(120deg, var(--mid-shade), var(--light-shade), var(--highlight)); }
-    50% { background: linear-gradient(120deg, var(--light-shade), var(--highlight), var(--dark-shade)); }
-    75% { background: linear-gradient(120deg, var(--highlight), var(--dark-shade), var(--mid-shade)); }
-    100% { background: linear-gradient(120deg, var(--dark-shade), var(--mid-shade), var(--light-shade)); }
-}
 
 .metallic-shimmer-bg {
-    animation: metallic-shimmer 4s infinite linear;
-    background-size: 400% 400%;
-    background-repeat: no-repeat;
-    background-position: center;
+    background: repeating-linear-gradient(
+        135deg,
+        var(--shade1),
+        var(--shade2),
+        var(--shade1)
+    );
+    background-size: 300% 300%;
+    animation: shimmer 6s infinite linear;
+}
+
+/* Shimmer animation */
+@keyframes shimmer {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 /* Define color themes for each clan */
 .blue-bg {
-    --dark-shade: #0D1A66;
-    --mid-shade: #2F4FC3;
-    --light-shade: #6A86FF;
-    --highlight: #A5B4FF;
+    --shade1: #1e3a8a;
+    --shade2: #60a5fa;
 }
 
 .red-bg {
-    --dark-shade: #660D0D;
-    --mid-shade: #C32F2F;
-    --light-shade: #FF6A6A;
-    --highlight: #FFB4B4;
+    --shade1: #7f1d1d;
+    --shade2: #f87171;
 }
 
 .black-bg {
-    --dark-shade: #1A1A1A;
-    --mid-shade: #4D4D4D;
-    --light-shade: #808080;
-    --highlight: #B0B0B0;
+    --shade1: #1a1a1a;
+    --shade2: #4d4d4d;
 }
 
 .green-bg {
-    --dark-shade: #0D660D;
-    --mid-shade: #2FC32F;
-    --light-shade: #6AFF6A;
-    --highlight: #B4FFB4;
+    --shade1: #064e3b;
+    --shade2: #6ee7b7;
 }
 
 
