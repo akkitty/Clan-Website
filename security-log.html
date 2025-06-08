@@ -12,18 +12,29 @@
         <h1>Security Log</h1>
         <p>Drag the images to their correct spots.</p>
 
-        <div class="grid-area">
-            <!-- Fixed Images -->
-            <div class="slot" data-match="img1"><img src="fixed1.png"></div>
-            <div class="slot" data-match="img2"><img src="fixed2.png"></div>
-            <div class="slot" data-match="img3"><img src="fixed3.png"></div>
-            <div class="slot" data-match="img4"><img src="fixed4.png"></div>
+<div class="grid-area">
+  <!-- Fixed Images -->
+  <div class="slot" data-match="img1"><img src="fixed1.png" alt="Fixed 1"></div>
+  <div class="slot" data-match="img2"><img src="fixed2.png" alt="Fixed 2"></div>
+  <div class="slot" data-match="img3"><img src="fixed3.png" alt="Fixed 3"></div>
+  <div class="slot" data-match="img4"><img src="fixed4.png" alt="Fixed 4"></div>
 
-            <!-- Draggable Images -->
-            <img src="draggable1.png" id="img1" draggable="true">
-            <img src="draggable2.png" id="img2" draggable="true">
-            <img src="draggable3.png" id="img3" draggable="true">
-            <img src="draggable4.png" id="img4" draggable="true">
+  <!-- Draggable Images -->
+  <img src="draggable1.png" id="img1" draggable="true" alt="Draggable 1">
+  <img src="draggable2.png" id="img2" draggable="true" alt="Draggable 2">
+  <img src="draggable3.png" id="img3" draggable="true" alt="Draggable 3">
+  <img src="draggable4.png" id="img4" draggable="true" alt="Draggable 4">
+  <!-- Distractors -->
+  <img src="distractor1.png" id="dist1" draggable="true" alt="Distractor 1">
+  <img src="distractor2.png" id="dist2" draggable="true" alt="Distractor 2">
+  <img src="distractor3.png" id="dist3" draggable="true" alt="Distractor 3">
+  <img src="distractor4.png" id="dist4" draggable="true" alt="Distractor 4">
+</div>
+
+<!-- Add a message container for success -->
+<p id="success-message" style="color: green; font-weight: bold; margin-top: 20px; display: none;">
+  Success! All images matched correctly.
+</p>
         </div>
     </div>
 </body>
