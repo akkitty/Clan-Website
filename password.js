@@ -17,6 +17,11 @@ function checkPassword(clan) {
             message.textContent = "Incorrect password. Please try again.";
             message.style.color = "red";
             message.style.marginTop = "10px";
+
+            // Remove message after 3 seconds
+            setTimeout(() => {
+                message.textContent = "";
+            }, 3000);
         }
     }
 }
