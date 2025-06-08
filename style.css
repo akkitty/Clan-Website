@@ -88,10 +88,11 @@ button:nth-child(4) { background-color: green; color: white; }
 .container {
     display: flex;
     flex-direction: column; /* Ensures vertical stacking */
-    align-items: center; /* Centers everything */
-    justify-content: center; /* Keeps elements balanced */
-    gap: 20px; /* Adds spacing between elements */
-    width: 100%; /* Prevents unwanted side alignment */
+    align-items: center;    /* Centers everything horizontally */
+    justify-content: center; /* Centers everything vertically */
+    gap: 20px;              /* Adds spacing between elements */
+    width: 100%;            /* Full width */
+    height: 100vh;          /* Full height for vertical centering */
 }
 
 
@@ -108,12 +109,18 @@ input {
     margin-top: 20px; /* Adds extra space below the logo */
 }
 
-
 button {
-    padding: 10px;
+    padding: 12px 24px;
     font-size: 18px;
-    margin-top: 10px;
-    cursor: pointer;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
 }
 
 /* === SECURITY LOG PUZZLE === */
